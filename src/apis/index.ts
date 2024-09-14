@@ -14,7 +14,7 @@ mainRouter.get("/", async (c) => {
 
   try {
     const dbUser = await prisma.user.findUnique({
-      where: { id: parseInt(user.id, 10) },
+      where: { id: user.id  },
       select: { id: true, username: true }
     });
 
